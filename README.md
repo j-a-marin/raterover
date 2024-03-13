@@ -1,7 +1,7 @@
 # raterover
 
 <!-- ![repo_banner](./app/assets/hub_banner.png "Repo Banner") -->
-<img src="./assets/hub_banner.png" alt="Repo Banner" width="150"/>
+<img src="./app/assets/hub_banner.png" alt="Repo Banner" width="150"/>
 
 
 ## Installation
