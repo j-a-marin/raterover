@@ -1,6 +1,6 @@
 # raterover
 
-![repo_banner](/assets/hub_banner.png "Repo Banner") 
+![repo_banner](./assets/hub_banner.png "Repo Banner")
 
 ## Installation
 
