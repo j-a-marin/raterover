@@ -12,7 +12,7 @@ However, training an LLM from scratch is expensive and time consuming. To addres
 
 ### Current Implementation
 
-The RateRover QA bot uses OpenAI [ChatGPT](https://openai.com/chatgpt) 3.5-turbo as its LLM and [chromdb](https://docs.trychroma.com/) as its vector database. The vector database functions as a repository for embeddings, which, in the present case were also generated and facilitated through OpenAI.
+The RateRover QA bot uses OpenAI [ChatGPT](https://openai.com/chatgpt) 3.5-turbo as its LLM and [chromdb](https://docs.trychroma.com/) as its vector database. The vector database functions as a repository for embeddings, which, in the present case, were also generated and facilitated through OpenAI.
 
 <figure>
   <img src="./app/assets/chroma.png" alt="RAG" width="400>
