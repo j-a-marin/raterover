@@ -12,7 +12,7 @@ Here's a simplified process for deploying using Docker on AWS:
 
 Some elaboration with code:
 
-### Push Docker Images to a Registry**
+### **Push Docker Images to a Registry**
 
 After building the images, push them to a Docker registry. AWS provides the Elastic Container Registry (ECR) service for this purpose.
 
@@ -23,7 +23,7 @@ docker push ecr-repo-url/langserve:latest
 # Repeat for flaskfrontend
 ```
 
-### Write Terraform Configurat**
+### **Write Terraform Configurat**
 
 Next, write Terraform configuration to define the AWS infrastructure, including an ECS cluster, task definitions, and service definitions for your Docker containers. It’s also necessary to define networking resources such as a VPC, subnets, security groups, and an Application Load Balancer (ALB) to route traffic to your containers.
 
@@ -85,10 +85,10 @@ resource "aws_ecs_service" "langserve_service" {
 # ... Repeat resources for `flaskfrontend` ...
 ```
 
-### Apply Terraform Configuration**
+### **Apply Terraform Configuration**
 
 Run **`terraform init`** to initialize Terraform and then **`terraform apply`** to create the resources in AWS.
 
-### Access Services through Load Balancer Endpoint**
+### **Access Services through Load Balancer Endpoint**
 
 Once deployed, the services can be accessed via the DNS name of the Application Load Balancer. You may need to configure path-based or host-based routing if both services are behind the same load balancer.
