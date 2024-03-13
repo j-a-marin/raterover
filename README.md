@@ -19,8 +19,8 @@ pip install -U langchain-cli
 
 <table>
   <tr>
-    <td><img src="./app/assets/EscrowQA_.png" alt=QA1" width="200"></td>
-    <td><img src="./app/assets/LangSmith.png" alt="QA1_LS" width="200"></td>
+    <td><img src="./app/assets/EscrowQA_.png" alt=QA1" width="400"></td>
+    <td><img src="./app/assets/LangSmith.png" alt="QA1_LS" width="400"></td>
   </tr>
 </table>
 
