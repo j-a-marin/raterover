@@ -22,7 +22,7 @@ retriever = vectorstore.as_retriever(k=2)
 # RAG prompt
 template = """Answer the question based only on the following context:
 {context}
-Remember to ensures th logical and grammatical sentence flow of your response
+Remember to ensure the logical and grammatical sentence flow of your response
 Question: {question}
 """
 prompt = ChatPromptTemplate.from_template(template)
