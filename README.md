@@ -1,7 +1,7 @@
 # raterover
 
 <!-- ![repo_banner](./app/assets/hub_banner.png "Repo Banner") -->
-<img src="./app/assets/hub_banner.png" alt="Repo Banner" width="500"/>
+<img src="./app/assets/hub_banner.png" alt="Repo Banner" width="375"/>
 
 
 ## Installation
@@ -11,6 +11,8 @@ Install the LangChain CLI if you haven't yet
 ```bash
 pip install -U langchain-cli
 ```
+![QA1](./app/assets/EscrowQA.png "EscrowQA")![QA1_LS](./app/assets/LangSmith.png "LangSmith")
+
 
 ## Adding packages
 
