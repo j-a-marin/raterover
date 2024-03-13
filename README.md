@@ -3,19 +3,14 @@
 <!-- ![repo_banner](./app/assets/hub_banner.png "Repo Banner") -->
 <img src="./app/assets/hub_banner.png" alt="Repo Banner" width="375"/>
 
+The introduction of a mortgage escrow bot with real-time access to federal escrow statutes is useful because it converges legal compliance, risk management, operational efficiency, and enhanced client service into a single, accessible tool. Escrow matters can be complex and such an app addresses and alleviates some of that complexity.
 
-## Installation
+### Real-time Legislative Compliance and Risk Management
 
-Install the LangChain CLI if you haven't yet
-
-```bash
-pip install -U langchain-cli
-```
-<!-- ![QA1](./app/assets/EscrowQA.png "EscrowQA")![QA1_LS](./app/assets/LangSmith.png "LangSmith") -->
-<!-- <p align="center">
-  <img src="./app/assets/EscrowQA_.png" alt="QA1" width="45%" />
-  <img src="./app/assets/LangSmith.png" alt="QA1_LS" width="45%" /> 
-</p> -->
+- **Automated Compliance Updates:**
+    - The escrow bot can provide instantaneous updates on changes to federal escrow laws, ensuring that all transactions are compliant with the latest regulations.
+- **Risk Assessment Tools:**
+    - By integrating real-time legislative data, the bot can assess the risk levels of various escrow arrangements under current laws, offering advice on the safest and most compliant pathways forward. Protects clients and brokers from unforeseen legal pitfalls.
 
 <table>
   <tr>
@@ -24,72 +19,15 @@ pip install -U langchain-cli
   </tr>
 </table>
 
-## Adding packages
+The introduction of a mortgage escrow bot with real-time access to federal escrow statutes is useful because it converges legal compliance, risk management, operational efficiency, and enhanced client service into a single, accessible tool. Escrow matters can be complex and such an app addresses and alleviates some of that complexity.
 
-```bash
-# adding packages from 
-# https://github.com/langchain-ai/langchain/tree/master/templates
-langchain app add $PROJECT_NAME
+## **For Brokers:**
 
-# adding custom GitHub repo packages
-langchain app add --repo $OWNER/$REPO
-# or with whole git string (supports other git providers):
-# langchain app add git+https://github.com/hwchase17/chain-of-verification
+1. **Efficiency and Client Service**: Brokers could leverage the bot to quickly access escrow account statuses, payment schedules, and any potential issues, allowing them to manage multiple transactions more effectively.
+2. **Compliance**: The bot could ensure that brokers remain compliant with federal regulations such as RESPA by automating escrow analysis and maintaining accurate records.
 
-# with a custom api mount point (defaults to `/{package_name}`)
-langchain app add $PROJECT_NAME --api_path=/my/custom/path/rag
-```
+## **For Clients:**
 
-Note: you remove packages by their api path
+1. **Transparency**: Clients gain real-time information about their escrow accounts, demystifying the process and enabling them to track their funds throughout the transaction.
+2. **Convenience**: The bot could answer common questions about escrow, property taxes, and insurance payments, reducing the need for clients to contact their brokers for basic information.
 
-```bash
-langchain app remove my/custom/path/rag
-```
-
-## Setup LangSmith (Optional)
-LangSmith will help us trace, monitor and debug LangChain applications. 
-LangSmith is currently in private beta, you can sign up [here](https://smith.langchain.com/). 
-If you don't have access, you can skip this section
-
-
-```shell
-export LANGCHAIN_TRACING_V2=true
-export LANGCHAIN_API_KEY=<your-api-key>
-export LANGCHAIN_PROJECT=<your-project>  # if not specified, defaults to "default"
-```
-
-## Launch LangServe
-
-```bash
-langchain serve
-```
-
-## Running in Docker
-
-This project folder includes a Dockerfile that allows you to easily build and host your LangServe app.
-
-### Building the Image
-
-To build the image, you simply:
-
-```shell
-docker build . -t my-langserve-app
-```
-
-If you tag your image with something other than `my-langserve-app`,
-note it for use in the next step.
-
-### Running the Image Locally
-
-To run the image, you'll need to include any environment variables
-necessary for your application.
-
-In the below example, we inject the `OPENAI_API_KEY` environment
-variable with the value set in my local environment
-(`$OPENAI_API_KEY`)
-
-We also expose port 8080 with the `-p 8080:8080` option.
-
-```shell
-docker run -e OPENAI_API_KEY=$OPENAI_API_KEY -p 8080:8080 my-langserve-app
-```
