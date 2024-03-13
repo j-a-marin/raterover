@@ -11,7 +11,11 @@ Install the LangChain CLI if you haven't yet
 ```bash
 pip install -U langchain-cli
 ```
-![QA1](./app/assets/EscrowQA.png "EscrowQA")![QA1_LS](./app/assets/LangSmith.png "LangSmith")
+<!-- ![QA1](./app/assets/EscrowQA.png "EscrowQA")![QA1_LS](./app/assets/LangSmith.png "LangSmith") -->
+<p align="center">
+  <img src="./app/assets/EscrowQA.png" alt="QA1" width="45%" />
+  <img src="./app/assets/LangSmith.png" alt="QA1_LS" width="45%" /> 
+</p>
 
 
 ## Adding packages
