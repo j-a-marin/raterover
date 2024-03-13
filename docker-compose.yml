@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  langchain:
+    build: .
+    command: langchain serve
+    volumes:
+      - .:/raterover
+    ports:
+      - "8000:8000"
+    working_dir: /raterover
+
+  flaskfrontend:
+    build: .
+    command: python ./app/frontend/frontend.py
+    volumes:
+      - .:/raterover
+    ports:
+      - "5000:5000"
+
+    working_dir: /raterover
