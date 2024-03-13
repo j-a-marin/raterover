@@ -23,7 +23,7 @@ docker push ecr-repo-url/langserve:latest
 # Repeat for flaskfrontend
 ```
 
-### **Write Terraform Configurat**
+### **Write Terraform Configuration**
 
 Next, write Terraform configuration to define the AWS infrastructure, including an ECS cluster, task definitions, and service definitions for your Docker containers. It’s also necessary to define networking resources such as a VPC, subnets, security groups, and an Application Load Balancer (ALB) to route traffic to your containers.
 
