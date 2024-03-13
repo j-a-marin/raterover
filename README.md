@@ -1,5 +1,7 @@
 # raterover
 
+![repo_banner](hub_banner.png "Repo Banner") 
+
 ## Installation
 
 Install the LangChain CLI if you haven't yet
