@@ -7,7 +7,7 @@ FASTAPI_BACKEND_URL = "http://127.0.0.1:8000/rag-chroma/invoke"  # Make sure to 
 
 @app_FRONT.route('/')
 def index():
-    return render_template('index4.html')  # Just render the form on the index route
+    return render_template('index5.html')  # Just render the form on the index route
 
 @app_FRONT.route('/ask', methods=['POST'])
 def ask():

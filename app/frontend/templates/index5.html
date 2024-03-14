@@ -3,104 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastAPI Frontend</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png')}}" >   
+    <title>RateRover Escrow Q&A App</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png')}}">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Add Google Fonts link for a custom font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-         /* Resets the margin for all elements to remove default margins */
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+            box-sizing: border-box;
         }
 
-        /* Style for the main container to center it on the page */
-        .container {
-            max-width: 640px;
-            width: 100%;
-            padding-top: 0; 
-            margin-top: 0;
-            /* Add vertical padding if needed for spacing within the container */
-            padding-bottom: 20px;
-        }
-
-        /* If the logo container still has too much space, adjust padding here */
-        .logo-container {
-            padding: 10px 20px; /* Reduced top and bottom padding */
-        }
-
-        /* Removes margin from the first element after .logo-container, if any */
-        .logo-container + * {
-            margin-top: 0;
-        }
-
-        /* Ensures there's no margin above the h1 common in user agent styles */
-        h1 {
-            margin-top: 0;
-        }
         body {
-            font-family: 'Open Sans', sans-serif; /* Use the custom Google Font */
-        }
-        .header-color {
-            background-color: #2b6cb0; /* Hex code matches the specific blue from the logo image */
-        }
-        .text-special {
-            font-weight: 700; /* bolder font similar to the one in the image */
-        }
-        .logo-container {
-            text-align: center; /* Center the logo horizontally */
-            padding: 20px;     /* Add some padding around the logo */
-        }
-        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f7fafc; /* Adjusted to match Tailwind bg-gray-100 */
             margin: 0;
             padding: 0;
         }
 
-    svg-container {
-        width: 200px;  
-        height: 200px; 
-        overflow: hidden; 
-        position: relative;
-    }
+        .container {
+            max-width: 640px;
+            width: 100%;
+            margin-top: 0;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .svg-container img {
-        position: absolute;
-        top: 50px; 
-        left: 100px;
-        width: 350px;
-        height: auto;
-    }
+        .header-color {
+            background-color: #2b6cb0;
+        }
+
+        .text-special {
+            font-weight: 700;
+        }
+
+        .svg-container {
+            text-align: center; /* Center the SVG image horizontally */
+            margin-top: 1px;
+            margin-bottom: 20px; /* Add space below the SVG container */
+        }
+
+        .svg-container img {
+            width: 100%; /* Make SVG responsive to container size */
+            max-width: 200px; /* Maximum width can be adjusted as needed */
+            height: auto;
+        }
 
     </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="container mx-auto px-4">
         <div class="svg-container">
-            <img  src="{{ url_for('static', filename='neighborhood.jpg')}}" alt="Neighborhood" />
+            <img src="{{ url_for('static', filename='neighborhood.jpg')}}" alt="Neighborhood" style="max-width: 100%;" />
+
         </div>
-        
-        <!-- <div class="logo-container">
-            <img src="{{ url_for('static', filename='logo2.png') }}" alt="Logo" width="100" />
-        </div> -->
         <div class="bg-white p-8 rounded-lg shadow-md">
             <h1 class="text-2xl header-color text-white font-bold text-center mb-4">RateRover Escrow Q&A App</h1>
             <p class="text-gray-600 text-center mb-4">Ask any question about Federal Escrow §1024.17:</p>
-            <!-- Form -->
-            <form id="askForm" class="mb-4">
+            <!-- Start of the form element -->
+            <form id="askForm">
                 <div class="mb-4">
                     <label for="question" class="block text-gray-700 text-sm font-bold mb-2">Ask a Question:</label>
                     <input type="text" id="question" name="question" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter your question">
                 </div>
                 <button type="submit" class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Ask</button>
             </form>
-            <!-- Answer -->
+            <!-- Answer will be displayed here -->
             <p id="answer" class="text-special text-black"></p>
+
+            <!-- Rest of your content -->
         </div>
     </div>
-    <!-- scripts -->
+    <!-- Your scripts -->
     <script>
         const form = document.getElementById('askForm');
         form.addEventListener('submit', (event) => {
